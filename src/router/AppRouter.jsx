@@ -13,12 +13,13 @@ import ProfilePage from "../pages/ProfilePage"
 import RegisterPage from "../pages/RegisterPage"
 import HeaderComp from "../components/HeaderComp"
 import BlogPage from "../pages/BlogPage"
+import FooterComp from "../components/FooterComp"
 
 const AppRouter = () => {
     return (
         <Router>
             <HeaderComp />
-            <div className="container">
+            <main className="container">
                 <Routes>
                     <Route path="/" element={<HomePage />} />
                     <Route path="/productos" element={<ProductsPage />} />
@@ -31,7 +32,8 @@ const AppRouter = () => {
 
                     <Route path="/*" element={<Navigate to="/" replace />} />
                 </Routes>
-            </div>
+            </main>
+            <FooterComp />
         </Router>
     )
 }

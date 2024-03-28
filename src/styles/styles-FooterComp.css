@@ -1,0 +1,33 @@
+:root {
+    --color1: #0c1618;
+    --color2: #004643;
+    --color3: #faf4d3;
+    --color4: #f6f6f6;
+    --colorHover: #8d8977;
+}
+
+footer {
+    background-color: var(--color1) !important;
+    box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.3) !important;
+    color: var(--color1) !important;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer .bx {
+    color: var(--color3) !important;
+    transition: color 0.3s ease !important;
+}
+
+footer .bx:hover {
+    color: var(--colorHover) !important;
+}
+
+footer .bx-cssSize {
+    font-size: clamp(1.5rem, 2.5vw, 3rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,136 @@
+:root {
+    --color1: #0c1618;
+    --color2: #004643;
+    --color3: #faf4d3;
+    --color4: #f6f6f6;
+    --colorHover: #8d8977;
+}
+
+.contenedorHeroHomePage {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.5)), url("../assets/images/fondoTenis.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-height: auto;
+    animation: earthquake 0.5s;
+    animation-iteration-count: 2;
+}
+
+.contenedorImagenIzquierdaHomePage img {
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.contenedorImagenDerechaHomePage img {
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.titleHeroHomePage {
+    color: var(--color4);
+    font-weight: 900;
+    font-size: clamp(2.5rem, 3vh, 3.5rem);
+}
+
+.imagenJordanNextLevel {
+    max-height: 30vh;
+}
+
+.contenedorInfoHomePage {
+    animation: earthquake 0.5s;
+    animation-iteration-count: 2;
+}
+
+.contenedorInfoNextLevelHomePage {
+    background-image: url("../assets/images/tenisJordanNextLevel.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-height: auto;
+    color: var(--color4);
+}
+
+.titleNextLevelHomePage {
+    font-size: clamp(2.2rem, 3vh, 3rem);
+}
+
+.textNextLevelHomePage {
+    font-size: clamp(1.2rem, 2vh, 1.7rem);
+}
+
+.contenedorInfoCommunityHomePage {
+    background-image: url("../assets/images/sneakersCommunityImg.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-height: auto;
+    color: var(--color4);
+}
+
+.btnRegistrarseHomePage {
+    display: inline-block;
+    background-color: var(--color3);
+    color: var(--color1);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Transición suave */
+}
+
+.btnRegistrarseHomePage:hover {
+    background-color: var(--colorHover);
+    color: var(--color1);
+}
+
+.sectionAboutHomePage {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sectionAboutHomePage .card {
+    height: auto;
+    color: var(--color4) !important;
+    transition: transform 0.3s ease-in-out;
+}
+
+.sectionAboutHomePage .card:hover {
+    transform: scale(1.02);
+}
+
+.sectionAboutHomePage .card-img-overlay {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.sectionAboutHomePage .card .card-text  {
+    font-size: clamp(14px, 2vw, 18px);
+}
+
+.sectionAboutHomePage .card .card-title {
+    font-size: clamp(20px, 3vw, 32px);
+}
+
+.sobreNosotrosTitleHomePage {
+    font-size: clamp(2.2rem, 3vh, 3rem);
+    color: var(--color2);
+}
+
+/* Animaciones */
+@keyframes earthquake {
+    0% { transform: translate(0, 0) rotate(0); }
+    10% { transform: translate(-10px, -10px) rotate(-1deg); }
+    20% { transform: translate(10px, -10px) rotate(1deg); }
+    30% { transform: translate(-10px, 10px) rotate(0.5deg); }
+    40% { transform: translate(10px, 10px) rotate(-0.5deg); }
+    50% { transform: translate(-10px, -10px) rotate(1deg); }
+    60% { transform: translate(10px, 10px) rotate(-1deg); }
+    70% { transform: translate(-10px, 10px) rotate(0.5deg); }
+    80% { transform: translate(10px, -10px) rotate(-0.5deg); }
+    90% { transform: translate(-10px, -10px) rotate(1deg); }
+    100% { transform: translate(0, 0) rotate(0); }
+}
+

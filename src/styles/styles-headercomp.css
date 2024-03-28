@@ -16,7 +16,23 @@ header {
     color: var(--color3) !important;
     width: 100%;
     margin: 0 auto;
-    padding: 0;
+    padding: 10px;
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    transition: top 0.3s ease-in-out;
+    z-index: 100; /* Asegúrate de que esto sea suficientemente alto para estar sobre otros contenidos */
+}
+
+.header.hidden {
+    top: -100%; /* Ajusta este valor según la altura de tu encabezado */
+}
+
+.logoHeaderImg {
+    max-height: clamp(3rem, 4vw, 3.5rem);
 }
 
 .titleLogoHeader {
@@ -42,6 +58,7 @@ header {
 .nav-link:hover, .nav-link.active {
     color: var(--color1) !important;
     background-color: var(--color3);
+    cursor: pointer;
 }
 
 .bx-cssSize {
