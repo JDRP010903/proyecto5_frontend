@@ -1,0 +1,29 @@
+:root {
+    --color1: #0c1618;
+    --color2: #004643;
+    --color3: #faf4d3;
+    --color4: #f6f6f6;
+    --colorHover: #8d8977;
+    --colorWhite: #ffffff;
+}
+
+.error-container {
+    min-height: 200px; /* Ajusta esto según tus necesidades */
+    background-color: var(--color4);
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    margin: 2rem;
+    padding: 1rem;
+}
+
+.error-title {
+    color: var(--color2);
+    font-size: 1.5rem; /* Ajusta el tamaño de fuente según necesites */
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.error-message {
+    color: var(--color1);
+    font-size: 1rem; /* Ajusta el tamaño de fuente según necesites */
+}

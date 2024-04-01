@@ -1,0 +1,13 @@
+:root {
+    --color1: #0c1618;
+    --color2: #004643;
+    --color3: #faf4d3;
+    --color4: #f6f6f6;
+    --colorHover: #8d8977;
+    --colorWhite: #ffffff;
+}
+
+.containerCartComp {
+    background-color: var(--color2) !important;
+    color: var(--color3) !important;
+}

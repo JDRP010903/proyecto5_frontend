@@ -1,0 +1,35 @@
+:root {
+    --color1: #0c1618;
+    --color2: #004643;
+    --color3: #faf4d3;
+    --color4: #f6f6f6;
+    --colorHover: #8d8977;
+    --colorWhite: #ffffff;
+}
+
+.contactanosPage {
+    height: auto;
+    background-color: var(--color2);
+    color: var(--color4) !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.titleContactanosPage {
+    font-weight: 600;
+}
+
+.formContactanosPage .btn-custom {
+    background-color: var(--color2);
+    color: var(--colorWhite);
+    border: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.formContactanosPage .btn-custom:hover, .formContactanosPage .btn-custom:focus {
+    background-color: var(--color1);
+    transform: scale(1.05);
+}

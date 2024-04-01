@@ -61,6 +61,15 @@ header {
     cursor: pointer;
 }
 
+.dropdown-menu {
+    display: none;
+}
+
+.dropdown-menu.show {
+    display: block;
+    top: 50px;
+}
+
 .bx-cssSize {
     font-size: clamp(1rem, 2vw, 1.5rem);
     display: flex;

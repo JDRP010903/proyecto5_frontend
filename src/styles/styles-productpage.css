@@ -1,0 +1,81 @@
+:root {
+    --color1: #0c1618;
+    --color2: #004643;
+    --color3: #faf4d3;
+    --color4: #f6f6f6;
+    --colorHover: #8d8977;
+    --colorWhite: #ffffff;
+}
+
+.product-details {
+    color: var(--color2);
+    background-color: var(--color4);
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.titleProductPage {
+    color: var(--color2);
+    font-weight: 900;
+    font-size: clamp(2.5rem, 3vh, 3rem);
+}
+
+.product-details img {
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.precioProductPage {
+    font-weight: 600;
+    font-size: clamp(2rem, 2.5vh, 3rem);
+}
+
+.descripcionProductPage {
+    font-weight: 400;
+    font-size: clamp(1.3rem, 1.5vh, 2rem);
+}
+
+.btnProductPage {
+    background-color: var(--color2);
+    color: var(--color3);
+    border: none;
+    transition: background-color 0.5s ease;
+}
+
+.btnProductPage:hover, .btnProductPage:focus {
+    background-color: var(--color1);
+    color: var(--color3);
+    transform: scale(1.05);
+}
+
+.image-thumbnails {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: auto;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.image-thumbnails img {
+    border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.image-thumbnails img:hover, .image-thumbnails img:focus {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    outline: none;
+}
+
+
+@media (min-width: 768px) {
+    .imageProductPage {
+        max-width: 500px;
+    }
+}
