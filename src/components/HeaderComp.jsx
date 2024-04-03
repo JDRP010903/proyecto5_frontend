@@ -104,13 +104,17 @@ const HeaderComp = () => {
                                     <ul className={`dropdown-menu${isOpen ? ' show' : ''}`}>
                                         {user.username ? (
                                             <>
-                                                <li><NavLink className="dropdown-item" to="/profile">Perfil</NavLink></li>
-                                                <li><a className="dropdown-item" href="#" onClick={logout}>Cerrar Sesión</a></li>
+                                                <li 
+                                                    className="nav-link"
+                                                >
+                                                    <NavLink className="dropdown-item miPerfilNavItem" to="/miperfil">Perfil</NavLink>
+                                                </li>
+                                                <li><button className="dropdown-item" to="/" onClick={logout}>Cerrar Sesión</button></li>
                                             </>
                                         ) : (
                                             <>
-                                                <li><NavLink className="dropdown-item" to="/login">Iniciar Sesión</NavLink></li>
-                                                <li><NavLink className="dropdown-item" to="/register">Registrarse</NavLink></li>
+                                                <li><button className="dropdown-item" data-bs-toggle="modal" data-bs-target="#LoginModal">Iniciar Sesión</button></li>
+                                                <li><button className="dropdown-item" data-bs-toggle="modal" data-bs-target="#RegisterModal">Registrarse</button></li>
                                             </>
                                         )}
                                     </ul>

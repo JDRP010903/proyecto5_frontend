@@ -13,10 +13,11 @@ import ProductsPage from "../pages/ProductsPage"
 import ProductPage from "../pages/ProductPage"
 import ContactanosPage from "../pages/ContactanosPage"
 import ProfilePage from "../pages/ProfilePage"
-import RegisterPage from "../pages/RegisterPage"
 import HeaderComp from "../components/HeaderComp"
 import FooterComp from "../components/FooterComp"
 import CartComp from "../components/CartComp"
+import LoginComp from "../components/LoginComp"
+import RegisterComp from "../components/RegisterComp"
 
 const AppRouter = () => {
 
@@ -30,25 +31,18 @@ const AppRouter = () => {
         <Router>
             <HeaderComp />
             <main className="container">
+                <LoginComp />
+                <RegisterComp />
                 <Routes>
                     <Route path="/" element={<HomePage />} />
                     <Route path="/productos" element={<ProductsPage />} />
                     <Route path="/producto/:id" element={<ProductPage />} />
                     <Route path="/contactanos" element={<ContactanosPage />} />
-                    <Route path="/miperfil" element={<ProfilePage />} />
-                    <Route path="/registrarse" element={<RegisterPage />} />
 
-                    {user?.user_name ? (
-                        <>
-                            <Route path="/miperfil" element={<ProfilePage />} />
-                            {/* Posiblemente más rutas privadas aquí */}
-                        </>
+                    {user.id ? (
+                        <Route path="/miperfil" element={<ProfilePage />} />
                     ) : (
-                        <>
-                            {/* Rutas públicas: solo accesibles si el usuario NO está autenticado */}
-                            <Route path="/registrarse" element={<RegisterPage />} />
-                            <Route path="/login" element={<RegisterPage />} />
-                        </>
+                        <Route path="/miperfil" element={<Navigate to="/" replace />} />
                     )}
 
                     <Route path="/*" element={<Navigate to="/" replace />} />

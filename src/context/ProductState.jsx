@@ -19,7 +19,6 @@ const ProductState = ({ children }) => {
 
     const obtenerProductos = useCallback(async () => {
         const resp = await obtenerProductosService();
-        // console.log(resp.data.data);
 
         dispatch({
         type: "OBTENER_PRODUCTOS",
@@ -29,7 +28,6 @@ const ProductState = ({ children }) => {
 
     const obtenerProducto = useCallback(async (id) => {
         const resp = await obtenerProductoService(id);
-        // console.log(resp.data.data);
 
         dispatch({
         type: "OBTENER_PRODUCTO",
@@ -39,7 +37,6 @@ const ProductState = ({ children }) => {
 
     const addCartProduct = async (id) => {
         const resp = await obtenerProductoService(id);
-        console.log(resp.data.data);
 
         dispatch({
         type: "AGREGAR_CART_PRODUCT",

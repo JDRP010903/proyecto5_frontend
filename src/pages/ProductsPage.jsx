@@ -1,16 +1,24 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { Carousel as BootstrapCarousel  } from 'bootstrap';
 import "../styles/styles-productspage.css"
 import SpinnerComp from "../components/SpinnerComp";
 import ErrorComp from "../components/ErrorComp";
+import ProductContext from '../context/ProductContext';
 
 const ProductsPage = () => {
 
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
+
+    const { addCartProduct } =
+    useContext(ProductContext);
+
+    const handleAgregarCarrito = (id) => {
+        addCartProduct(id);
+    };
 
     useEffect(() => {
         const fetchProducts = async () => {
@@ -90,7 +98,7 @@ const ProductsPage = () => {
                                     </div>
                                 </div>
                                 <div className="card-footer p-2">
-                                    <button className="btn btn-custom w-100" type="button" onClick={(e) => e.stopPropagation()}>AGREGAR AL CARRITO</button>
+                                    <button className="btn btn-custom w-100" type="button" onClick={() => handleAgregarCarrito(product.id)}>AGREGAR AL CARRITO</button>
                                 </div>
                             </div>
                         </Link>

@@ -1,4 +1,3 @@
-import { NavLink } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import "../styles/styles-homepage.css"
 
@@ -72,9 +71,9 @@ const HomePage = () => {
                 <div className="col-12 col-md-5 contenedorInfoCommunityHomePage mb-3 py-5 text-center">
                     <h2 className="m-2 titleNextLevelHomePage">ÚNETE A NUESTRA COMUNIDAD</h2>
                     <div className='d-flex p-5 justify-content-center align-items-center h-100'>
-                        <NavLink to="/registrarse" className="btn btnRegistrarseHomePage">
+                        <button to="/registrarse" className="btn btnRegistrarseHomePage" data-bs-toggle="modal" data-bs-target="#RegisterModal">
                             REGISTRARSE
-                        </NavLink>
+                        </button>
                     </div>
                 </div>
             </div>

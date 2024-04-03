@@ -1,8 +1,9 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import SpinnerComp from "../components/SpinnerComp";
 import ErrorComp from "../components/ErrorComp";
+import ProductContext from '../context/ProductContext';
 
 import "../styles/styles-productpage.css"
 
@@ -13,6 +14,14 @@ const ProductPage = () => {
     const [selectedImage, setSelectedImage] = useState('');
     const [imageList, setImageList] = useState([]);
     const [error, setError] = useState(null);
+
+    const { addCartProduct } =
+    useContext(ProductContext);
+
+    const handleAgregarCarrito = (id) => {
+        addCartProduct(id);
+        console.log("Agregado al carrito")
+    };
 
     useEffect(() => {
         const fetchProductDetails = async () => {
@@ -69,6 +78,7 @@ const ProductPage = () => {
                                 <button
                                     type="button"
                                     className="btn btnProductPage"
+                                    onClick={() => handleAgregarCarrito(product.id)}
                                 >
                                     Agregar al Carrito
                                 </button>

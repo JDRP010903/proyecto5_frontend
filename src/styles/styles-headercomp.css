@@ -61,6 +61,17 @@ header {
     cursor: pointer;
 }
 
+.miPerfilNavItem {
+    color: var(--color3);
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.miPerfilNavItem:hover, .miPerfilNavItem.active {
+    color: var(--color1) !important;
+    background-color: var(--color3);
+    cursor: pointer;
+}
+
 .dropdown-menu {
     display: none;
 }

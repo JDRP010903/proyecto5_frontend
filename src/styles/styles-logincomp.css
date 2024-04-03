@@ -1,0 +1,27 @@
+:root {
+    --color1: #0c1618;
+    --color2: #004643;
+    --color3: #faf4d3;
+    --color4: #f6f6f6;
+    --colorHover: #8d8977;
+    --colorWhite: #ffffff;
+}
+
+.loginModal {
+    background-color: var(--color2);
+    color: var(--color3) !important;
+}
+
+.form-login input,
+.form-login button {
+    border-radius: 0.25rem;
+}
+
+.loginModal .btn-custom {
+    background-color: var(--color3);
+    color: var(--color2);
+}
+
+.loginModal .btn-custom:hover {
+    background-color: var(--colorHover);
+}

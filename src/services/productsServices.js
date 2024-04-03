@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const URL = "https://dwfs23-m3s21-demo-api.onrender.com/productos";
+const API_URL = import.meta.env.VITE_PRUEBAS_API;
+const URL = `${API_URL}/productos`;
 
 const obtenerProductosService = async () => {
     const resp = await axios.get(URL);
